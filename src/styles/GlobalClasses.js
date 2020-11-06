@@ -45,6 +45,30 @@ const GlobalClasses = createGlobalStyle`
     padding-left: 0px;
   }
 
+  .p-0-5 {
+    padding: 5px;
+  }
+  .py-0-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .px-0-5 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .pt-0-5 {
+    padding-top: 5px;
+  }
+  .pr-0-5 {
+    padding-right: 5px;
+  }
+  .pb-0-5 {
+    padding-bottom: 5px;
+  }
+  .pl-0-5 {
+    padding-left: 5px;
+  }
+
   .p-1 {
     padding: 10px;
   }
@@ -259,6 +283,30 @@ const GlobalClasses = createGlobalStyle`
   }
   .ml-0 {
     margin-left: 0px;
+  }
+
+  .m-0-5 {
+    margin: 5px;
+  }
+  .my-0-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .mx-0-5 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .mt-0-5 {
+    margin-top: 5px;
+  }
+  .mr-0-5 {
+    margin-right: 5px;
+  }
+  .mb-0-5 {
+    margin-bottom: 5px;
+  }
+  .ml-0-5 {
+    margin-left: 5px;
   }
 
   .m-1 {
