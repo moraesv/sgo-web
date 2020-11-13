@@ -7,5 +7,23 @@ import H6 from './H6'
 import P from './P'
 import Small from './Small'
 import Span from './Span'
+import Button from './Button'
+import Input from './Input'
+import Label from './Label'
+import Textarea from './Textarea'
 
-export { H1, H2, H3, H4, H5, H6, P, Small, Span }
+export {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Small,
+  Span,
+  Button,
+  Input,
+  Label,
+  Textarea,
+}

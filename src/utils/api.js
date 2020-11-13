@@ -8,13 +8,20 @@ export const api = axios.create({
   withCredentials: true,
 })
 
-/* api.interceptors.response.use(
+function LoginIfNotAuthenticated(error) {
+  if (error.response && error.response.status === 401) {
+    window.location = '/login'
+  }
+}
+
+api.interceptors.response.use(
   function (response) {
     return response
   },
   function (error) {
+    LoginIfNotAuthenticated(error)
     throw error
   }
-) */
+)
 
 export default api
