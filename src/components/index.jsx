@@ -11,6 +11,9 @@ import Button from './Button'
 import Input from './Input'
 import Label from './Label'
 import Textarea from './Textarea'
+import Select from './Select'
+import Checkbox from './Checkbox'
+import Radio from './Radio'
 
 export {
   H1,
@@ -26,4 +29,7 @@ export {
   Input,
   Label,
   Textarea,
+  Select,
+  Checkbox,
+  Radio,
 }

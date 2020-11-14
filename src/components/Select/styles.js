@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 import colors from '../../utils/colors'
 
-export const TextareaStyle = styled.textarea`
+export const SelectStyle = styled.select`
   outline: 0;
-  min-height: 100px;
+  min-height: 40px;
   padding: 9px;
   font-size: 16px;
   line-height: 22px;
   width: 100%;
 
-  border: 2px solid ${colors.gray};
-  border-radius: 5px;
+  border-bottom: 2px solid ${colors.gray};
 
   &.focus,
   &:focus,

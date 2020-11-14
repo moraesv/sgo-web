@@ -13,6 +13,10 @@ import {
   Button,
   Input,
   Label,
+  Textarea,
+  Select,
+  Checkbox,
+  Radio,
 } from '../../components'
 
 import colors from '../../utils/colors'
@@ -236,6 +240,100 @@ function Styleguide() {
           <Col lg={2}>
             <Label className="mt-3">Disabled</Label>
             <Input disabled defaultValue="Text" />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={4}>
+            <H3 className="mt-5">Textarea</H3>
+
+            <Label className="mt-3">Label</Label>
+            <Textarea defaultValue="Text" />
+            <Label className="mt-3">Focus</Label>
+            <Textarea defaultValue="Text" className="focus" />
+            <Label className="mt-3">Success</Label>
+            <Textarea defaultValue="Text" className="success" />
+            <Label className="mt-3">Error</Label>
+            <Textarea defaultValue="Text" className="error" />
+            <Label className="mt-3">Disabled</Label>
+            <Textarea defaultValue="Text" disabled />
+          </Col>
+          <Col lg={3}>
+            <H3 className="mt-5">Select</H3>
+
+            <Label className="mt-3">Label</Label>
+            <Select defaultValue="1">
+              <option value="1">Text</option>
+            </Select>
+            <Label className="mt-3">Focus</Label>
+            <Select defaultValue="1" className="focus">
+              <option value="1">Text</option>
+            </Select>
+            <Label className="mt-3">Success</Label>
+            <Select defaultValue="1" className="success">
+              <option value="1">Text</option>
+            </Select>
+            <Label className="mt-3">Error</Label>
+            <Select defaultValue="1" className="error">
+              <option value="1">Text</option>
+            </Select>
+            <Label className="mt-3">Disabled</Label>
+            <Select defaultValue="1" disabled>
+              <option value="1">Text</option>
+            </Select>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={3}>
+            <H3 className="mt-5">Checkbox</H3>
+
+            <Checkbox className="mt-3" defaultValue="Text" label="Normal" />
+            <Checkbox
+              className="mt-3 focus"
+              defaultValue="Text"
+              label="Focus & hover"
+            />
+            <Checkbox className="mt-3" defaultChecked label="Selected" />
+            <Checkbox
+              className="mt-3"
+              disabled
+              defaultValue="Text"
+              defaultChecked
+              label="Selected & disabled"
+            />
+
+            <Checkbox
+              className="mt-3"
+              defaultValue="Text"
+              disabled
+              label="Disabled & selected"
+            />
+          </Col>
+          <Col lg={3}>
+            <H3 className="mt-5">Radio</H3>
+
+            <Radio className="mt-3" defaultValue="Text" label="Normal" />
+            <Radio
+              className="mt-3 focus"
+              defaultValue="Text"
+              label="Focus & hover"
+            />
+            <Radio className="mt-3" defaultChecked label="Selected" />
+            <Radio
+              className="mt-3"
+              disabled
+              defaultValue="Text"
+              defaultChecked
+              label="Selected & disabled"
+            />
+
+            <Radio
+              className="mt-3"
+              defaultValue="Text"
+              disabled
+              label="Disabled & selected"
+            />
           </Col>
         </Row>
       </Container>
