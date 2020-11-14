@@ -10,6 +10,7 @@ import GlobalFonts from '../../styles/GlobalFonts'
 import Main from '../Main'
 
 import routes from '../../routes'
+import Header from '../Header'
 
 function Layout() {
   return (
@@ -18,9 +19,9 @@ function Layout() {
       <GlobalClasses />
       <GlobalFonts />
       <Router history={history}>
-        <Main>
-          <Switch>
-            {routes.map((route, key) => {
+        <Switch>
+          {routes.map((route, key) => {
+            if (route.hideLayout) {
               return (
                 <Route
                   key={key}
@@ -29,10 +30,23 @@ function Layout() {
                   exact={route.exact}
                 />
               )
-            })}
-            <Redirect to="/" />
-          </Switch>
-        </Main>
+            }
+            return (
+              <>
+                <Header pageName={route.pageName} />
+                <Main>
+                  <Route
+                    key={key}
+                    path={route.path}
+                    component={route.component}
+                    exact={route.exact}
+                  />
+                </Main>
+              </>
+            )
+          })}
+          <Redirect to="/avisos" />
+        </Switch>
       </Router>
     </>
   )

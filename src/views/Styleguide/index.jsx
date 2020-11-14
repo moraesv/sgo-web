@@ -292,7 +292,7 @@ function Styleguide() {
             <Checkbox
               className="mt-3 focus"
               defaultValue="Text"
-              label="Focus & hover"
+              label="Focus &amp; hover"
             />
             <Checkbox className="mt-3" defaultChecked label="Selected" />
             <Checkbox
@@ -300,14 +300,14 @@ function Styleguide() {
               disabled
               defaultValue="Text"
               defaultChecked
-              label="Selected & disabled"
+              label="Selected &amp; disabled"
             />
 
             <Checkbox
               className="mt-3"
               defaultValue="Text"
               disabled
-              label="Disabled & selected"
+              label="Disabled &amp; selected"
             />
           </Col>
           <Col lg={3}>
@@ -317,7 +317,7 @@ function Styleguide() {
             <Radio
               className="mt-3 focus"
               defaultValue="Text"
-              label="Focus & hover"
+              label="Focus &amp; hover"
             />
             <Radio className="mt-3" defaultChecked label="Selected" />
             <Radio
@@ -325,14 +325,14 @@ function Styleguide() {
               disabled
               defaultValue="Text"
               defaultChecked
-              label="Selected & disabled"
+              label="Selected &amp; disabled"
             />
 
             <Radio
               className="mt-3"
               defaultValue="Text"
               disabled
-              label="Disabled & selected"
+              label="Disabled &amp; selected"
             />
           </Col>
         </Row>

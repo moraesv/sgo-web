@@ -25,8 +25,9 @@ const GlobalStyles = createGlobalStyle`
   *, button, input{
     border: 0;
     background: none;
-    font-family: 'Ubuntu Regular';
+    font-family: 'Ubuntu Medium';
     font-size: 16px;
+    line-height: 20px;
     color:${colors.dark};
   }
 
