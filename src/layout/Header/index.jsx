@@ -14,7 +14,7 @@ function Header({ pageName, ...props }) {
     <Container>
       <HeaderStyle {...props}>
         <H1 font={fonts.ubuntuBold}>{pageName}</H1>
-        <ProfileButton>
+        <ProfileButton to="/perfil">
           <img src={Avatar} alt="avatar" />
           Nome
         </ProfileButton>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Redirect, Router, Switch, Route } from 'react-router-dom'
 
 import history from '../../utils/history'
@@ -11,6 +11,7 @@ import Main from '../Main'
 
 import routes from '../../routes'
 import Header from '../Header'
+import Sidebar from '../Sidebar'
 
 function Layout() {
   return (
@@ -32,8 +33,9 @@ function Layout() {
               )
             }
             return (
-              <>
+              <Fragment key={key}>
                 <Header pageName={route.pageName} />
+                <Sidebar />
                 <Main>
                   <Route
                     key={key}
@@ -42,7 +44,7 @@ function Layout() {
                     exact={route.exact}
                   />
                 </Main>
-              </>
+              </Fragment>
             )
           })}
           <Redirect to="/avisos" />

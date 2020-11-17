@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Container } from 'reactstrap'
 
 function Avisos() {
   return (
     <>
-      <Container>teste</Container>
+      <Container>
+        <Link to="/login">teste</Link>
+      </Container>
     </>
   )
 }

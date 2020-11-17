@@ -15,7 +15,7 @@ function Login({ history }) {
     const response = await login({ nomeUsuario, senha })
 
     if (response) {
-      history.push('/')
+      history.push('/avisos')
     }
   }
   return (
