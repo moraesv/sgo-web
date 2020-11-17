@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 
-function Avisos() {
+function Relatorios() {
   return (
     <>
-      <Container>teste</Container>
+      <Container>Relatorios</Container>
     </>
   )
 }
 
-export default Avisos
+export default Relatorios

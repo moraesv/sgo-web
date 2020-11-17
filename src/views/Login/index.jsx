@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Container } from 'reactstrap'
 import { Button, Input, Label } from '../../components'
 import login from './services/requests'
@@ -6,7 +7,8 @@ import { LoginContainer } from './styles'
 
 import Logo from '../../assets/images/logo-guarda.png'
 
-function Login({ history }) {
+function Login() {
+  const history = useHistory()
   const [nomeUsuario, setNomeUsuario] = useState('')
   const [senha, setSenha] = useState('')
 

@@ -20,12 +20,13 @@ import DescriptionIcon from '../../assets/icons/description.svg'
 import OutIcon from '../../assets/icons/out.svg'
 import PasteIcon from '../../assets/icons/paste.svg'
 import AddIcon from '../../assets/icons/add.svg'
+import logout from './services/requests'
 
 function SidebarLink({ isOpen, icon, children, ...props }) {
   return (
     <LinkStyle {...props} className="mt-2">
       <img src={icon} alt="" className="mr-1" />
-      {children}
+      {isOpen ? children : null}
     </LinkStyle>
   )
 }
@@ -55,24 +56,29 @@ function Sidebar() {
         <SideBarButtonStyle onClick={() => setOpen(!isOpen)} type="button" />
 
         <div>
-          <SidebarLink icon={DashboardIcon} to="/avisos">
+          <SidebarLink icon={DashboardIcon} isOpen={isOpen} to="/avisos">
             Avisos
           </SidebarLink>
-          <SidebarLink icon={AddIcon} to="/cadastros">
+          <SidebarLink icon={AddIcon} isOpen={isOpen} to="/cadastros">
             Cadastros
           </SidebarLink>
-          <SidebarLink icon={DescriptionIcon} to="/registros">
+          <SidebarLink icon={DescriptionIcon} isOpen={isOpen} to="/registros">
             Registros
           </SidebarLink>
-          <SidebarLink icon={PasteIcon} to="/relatorios">
+          <SidebarLink icon={PasteIcon} isOpen={isOpen} to="/relatorios">
             Relatórios
           </SidebarLink>
-          <SidebarLink icon={ChartIcon} to="/estatisticas">
+          <SidebarLink icon={ChartIcon} isOpen={isOpen} to="/estatisticas">
             Estatísticas
           </SidebarLink>
         </div>
         <div>
-          <SidebarLink icon={OutIcon} to="/login">
+          <SidebarLink
+            icon={OutIcon}
+            isOpen={isOpen}
+            to="/login"
+            onClick={() => logout()}
+          >
             Sair
           </SidebarLink>
         </div>

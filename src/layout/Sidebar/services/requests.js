@@ -1,8 +1,8 @@
 import api from '../../../utils/api'
 
-export default async function login(data) {
+export default async function logout() {
   try {
-    await api.post('/api/login', data)
+    await api.post('/api/logout')
 
     return true
   } catch (e) {

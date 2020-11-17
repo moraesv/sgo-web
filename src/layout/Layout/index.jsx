@@ -1,7 +1,5 @@
-import React, { Fragment } from 'react'
-import { Redirect, Router, Switch, Route } from 'react-router-dom'
-
-import history from '../../utils/history'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import GlobalStyles from '../../styles/GlobalStyles'
 import GlobalClasses from '../../styles/GlobalClasses'
@@ -19,10 +17,10 @@ function Layout() {
       <GlobalStyles />
       <GlobalClasses />
       <GlobalFonts />
-      <Router history={history}>
+      <Router>
         <Switch>
           {routes.map((route, key) => {
-            if (route.hideLayout) {
+            if (!route.admin) {
               return (
                 <Route
                   key={key}
@@ -32,22 +30,44 @@ function Layout() {
                 />
               )
             }
-            return (
-              <Fragment key={key}>
-                <Header pageName={route.pageName} />
-                <Sidebar />
-                <Main>
-                  <Route
-                    key={key}
-                    path={route.path}
-                    component={route.component}
-                    exact={route.exact}
-                  />
-                </Main>
-              </Fragment>
-            )
+            return null
           })}
-          <Redirect to="/avisos" />
+
+          <Route
+            path={'/'}
+            render={() => {
+              return (
+                <>
+                  <Main>
+                    <Sidebar />
+                    <Switch>
+                      {routes.map((route, key) => {
+                        if (route.admin) {
+                          return (
+                            <Route
+                              key={key}
+                              path={route.path}
+                              render={() => {
+                                const Component = route.component
+                                return (
+                                  <>
+                                    <Header pageName={route.pageName} />
+                                    <Component />
+                                  </>
+                                )
+                              }}
+                              exact={route.exact}
+                            />
+                          )
+                        }
+                        return null
+                      })}
+                    </Switch>
+                  </Main>
+                </>
+              )
+            }}
+          />
         </Switch>
       </Router>
     </>

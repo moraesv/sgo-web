@@ -1,27 +1,60 @@
 import Styleguide from '../views/Styleguide'
 import Login from '../views/Login'
 import Avisos from '../views/Avisos'
+import Cadastros from '../views/Cadastros'
+import Perfil from '../views/Perfil'
+import Registros from '../views/Registros'
+import Relatorios from '../views/Relatorios'
 
 const routes = [
   {
     component: Styleguide,
     path: '/styleguide',
     exact: true,
-    hideLayout: true,
+    admin: false,
     pageName: 'Styleguide',
   },
   {
     component: Login,
     path: '/login',
     exact: true,
-    hideLayout: true,
+    admin: false,
     pageName: 'Login',
   },
   {
     component: Avisos,
     path: '/avisos',
     exact: true,
+    admin: true,
     pageName: 'Avisos',
+  },
+  {
+    component: Cadastros,
+    path: '/cadastros',
+    exact: true,
+    admin: true,
+    pageName: 'Cadastros',
+  },
+  {
+    component: Registros,
+    path: '/registros',
+    exact: true,
+    admin: true,
+    pageName: 'Registros',
+  },
+  {
+    component: Relatorios,
+    path: '/relatorios',
+    exact: true,
+    admin: true,
+    pageName: 'Relatórios',
+  },
+  {
+    component: Perfil,
+    path: '/perfil',
+    exact: true,
+    admin: true,
+    pageName: 'Perfil',
   },
 ]
 
