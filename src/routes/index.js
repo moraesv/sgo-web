@@ -5,6 +5,7 @@ import Cadastros from '../views/Cadastros'
 import Perfil from '../views/Perfil'
 import Registros from '../views/Registros'
 import Relatorios from '../views/Relatorios'
+import Oficiais from '../views/Oficiais'
 
 const routes = [
   {
@@ -55,6 +56,13 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Perfil',
+  },
+  {
+    component: Oficiais,
+    path: '/oficiais',
+    exact: true,
+    admin: true,
+    pageName: 'Oficial',
   },
 ]
 

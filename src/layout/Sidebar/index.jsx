@@ -15,7 +15,6 @@ import fonts from '../../utils/fonts'
 import useOutsideClick from '../../hooks/useOutsideClick'
 
 import DashboardIcon from '../../assets/icons/dash.svg'
-import ChartIcon from '../../assets/icons/chart.svg'
 import DescriptionIcon from '../../assets/icons/description.svg'
 import OutIcon from '../../assets/icons/out.svg'
 import PasteIcon from '../../assets/icons/paste.svg'
@@ -68,9 +67,9 @@ function Sidebar() {
           <SidebarLink icon={PasteIcon} isOpen={isOpen} to="/relatorios">
             Relatórios
           </SidebarLink>
-          <SidebarLink icon={ChartIcon} isOpen={isOpen} to="/estatisticas">
+          {/* <SidebarLink icon={ChartIcon} isOpen={isOpen} to="/estatisticas">
             Estatísticas
-          </SidebarLink>
+          </SidebarLink> */}
         </div>
         <div>
           <SidebarLink

@@ -14,6 +14,7 @@ import Textarea from './Textarea'
 import Select from './Select'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
+import Pagelink from './Pagelink'
 
 export {
   H1,
@@ -32,4 +33,5 @@ export {
   Select,
   Checkbox,
   Radio,
+  Pagelink,
 }

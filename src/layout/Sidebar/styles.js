@@ -61,7 +61,6 @@ export const SideBarButtonStyle = styled.button`
 
 export const LinkStyle = styled(Link)`
   height: 50px;
-  min-width: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
