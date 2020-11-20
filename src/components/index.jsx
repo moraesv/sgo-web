@@ -15,6 +15,8 @@ import Select from './Select'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
 import Pagelink from './Pagelink'
+import Table from './Table'
+import Box from './Box'
 
 export {
   H1,
@@ -34,4 +36,6 @@ export {
   Checkbox,
   Radio,
   Pagelink,
+  Table,
+  Box,
 }
