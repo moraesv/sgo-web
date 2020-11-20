@@ -7,7 +7,12 @@ import { updateOficial, getOficial } from './services/requests'
 
 function OficiaisEdicao() {
   const { id } = useParams()
-  const [oficial, setOficial] = useState({})
+  const [oficial, setOficial] = useState({
+    nomeOficial: '',
+    nomeUsuario: '',
+    funcional: '',
+    chapa: '',
+  })
 
   const update = useCallback(async () => {
     await updateOficial(id, oficial)

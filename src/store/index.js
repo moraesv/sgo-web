@@ -1,5 +1,6 @@
 import { createStore, combineReducers } from 'redux'
+import profile from './profile/reducer'
 
-const reducer = combineReducers({})
+const reducers = combineReducers({ profile })
 
-export default createStore(reducer)
+export default createStore(reducers)

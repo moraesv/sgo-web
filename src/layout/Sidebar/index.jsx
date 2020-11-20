@@ -20,6 +20,7 @@ import OutIcon from '../../assets/icons/out.svg'
 import PasteIcon from '../../assets/icons/paste.svg'
 import AddIcon from '../../assets/icons/add.svg'
 import logout from './services/requests'
+import { setProfile } from '../../store/profile/actions'
 
 function SidebarLink({ isOpen, icon, children, ...props }) {
   return (
@@ -35,6 +36,11 @@ function Sidebar() {
   const sidebarRef = useRef(null)
 
   useOutsideClick(sidebarRef, () => setOpen(false))
+
+  function logoff() {
+    logout()
+    setProfile(null)
+  }
 
   return (
     <SidebarStyle isOpen={isOpen} ref={sidebarRef}>
@@ -76,7 +82,7 @@ function Sidebar() {
             icon={OutIcon}
             isOpen={isOpen}
             to="/login"
-            onClick={() => logout()}
+            onClick={() => logoff()}
           >
             Sair
           </SidebarLink>
