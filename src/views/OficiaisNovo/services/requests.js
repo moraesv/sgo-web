@@ -1,6 +1,6 @@
 import api from '../../../utils/api'
 
-export async function createOficial(id, data) {
+export async function createOficial(data) {
   try {
     const response = await api.post(`/api/oficiais`, data)
     if (response) {

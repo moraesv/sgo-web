@@ -1,21 +1,17 @@
-import React, { useCallback, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useCallback, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { Col, Container, Row } from 'reactstrap'
 import { Input, Button, Box, Label } from '../../components'
 import ButtonLink from '../../components/ButtonLink'
-import { createOficial } from './services/requests'
+import { updateOficial, getOficial } from './services/requests'
 
-function OficiaisNovo() {
-  const history = useHistory()
+function OficiaisEdicao() {
+  const { id } = useParams()
   const [oficial, setOficial] = useState({})
 
-  const create = useCallback(async () => {
-    const response = await createOficial(oficial)
-
-    if (response && response.id) {
-      history.push(`/oficiais/${response.id}`)
-    }
-  }, [history, oficial])
+  const update = useCallback(async () => {
+    await updateOficial(id, oficial)
+  }, [oficial, id])
 
   const change = useCallback(
     (field, value) => {
@@ -23,6 +19,17 @@ function OficiaisNovo() {
     },
     [oficial]
   )
+
+  const load = useCallback(async () => {
+    const response = await getOficial(id)
+    if (response) {
+      setOficial(response)
+    }
+  }, [id])
+
+  useEffect(() => {
+    load()
+  }, [load])
 
   return (
     <>
@@ -71,16 +78,12 @@ function OficiaisNovo() {
             </Col>
             <Col lg={{ offset: 1, size: 4 }}>
               <Label>Senha</Label>
-              <Input
-                type="password"
-                value={oficial.senha}
-                onChange={(e) => change('senha', e.target.value)}
-              />
+              <Input type="password" disabled defaultValue={'.........'} />
             </Col>
           </Row>
           <Row className="mt-5">
             <Col lg={{ offset: 9, size: 2 }}>
-              <Button onClick={create}>Salvar</Button>
+              <Button onClick={update}>Salvar</Button>
             </Col>
           </Row>
         </Box>
@@ -89,4 +92,4 @@ function OficiaisNovo() {
   )
 }
 
-export default OficiaisNovo
+export default OficiaisEdicao

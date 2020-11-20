@@ -21,7 +21,7 @@ export default function useCreateTableColumns({ history, update }) {
         accessor: 'chapa',
       },
       {
-        Header: 'Criada em',
+        Header: 'Criado em',
         accessor: 'criadoEm',
       },
       {
