@@ -15,7 +15,19 @@ function AvisosNovo() {
   })
 
   const create = useCallback(async () => {
-    const response = await createAviso(aviso)
+    function formatDate(value) {
+      var datePart = value.match(/\d+/g),
+        year = datePart[0].substring(2),
+        month = datePart[1],
+        day = datePart[2]
+
+      return month + '/' + day + '/' + year + ' 03:00'
+    }
+
+    const inicio = new Date(formatDate(aviso.inicio))
+    const fim = new Date(formatDate(aviso.fim))
+
+    const response = await createAviso({ ...aviso, inicio, fim })
 
     if (response && response.id) {
       history.push(`/avisos/${response.id}`)
