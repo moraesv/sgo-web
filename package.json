@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "date-fns": "^2.16.1",
     "git-cz": "^4.7.4",
     "history": "^5.0.0",
     "namor": "^2.0.2",

@@ -1,6 +1,6 @@
 import Styleguide from '../views/Styleguide'
 import Login from '../views/Login'
-import Avisos from '../views/Avisos'
+import AvisosDash from '../views/AvisosDash'
 import Cadastros from '../views/Cadastros'
 import Perfil from '../views/Perfil'
 import Registros from '../views/Registros'
@@ -29,6 +29,9 @@ import TiposAcidenteEdicao from '../views/TiposAcidenteEdicao'
 import TiposPista from '../views/TiposPista'
 import TiposPistaNovo from '../views/TiposPistaNovo'
 import TiposPistaEdicao from '../views/TiposPistaEdicao'
+import Avisos from '../views/Avisos'
+import AvisosNovo from '../views/AvisosNovo'
+import AvisosEdicao from '../views/AvisosEdicao'
 
 const routes = [
   {
@@ -46,11 +49,11 @@ const routes = [
     pageName: 'Login',
   },
   {
-    component: Avisos,
-    path: '/avisos',
+    component: AvisosDash,
+    path: '/avisos-home',
     exact: true,
     admin: true,
-    pageName: 'Avisos',
+    pageName: 'AvisosDash',
   },
   {
     component: Cadastros,
@@ -247,6 +250,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Tipos de pista - Edição',
+  },
+  {
+    component: Avisos,
+    path: '/avisos',
+    exact: true,
+    admin: true,
+    pageName: 'Avisos',
+  },
+  {
+    component: AvisosNovo,
+    path: '/avisos/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Avisos - Criação',
+  },
+  {
+    component: AvisosEdicao,
+    path: '/avisos/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Avisos - Edição',
   },
 ]
 

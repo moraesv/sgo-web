@@ -61,7 +61,7 @@ function Sidebar() {
         <SideBarButtonStyle onClick={() => setOpen(!isOpen)} type="button" />
 
         <div>
-          <SidebarLink icon={DashboardIcon} isOpen={isOpen} to="/avisos">
+          <SidebarLink icon={DashboardIcon} isOpen={isOpen} to="/avisos-home">
             Avisos
           </SidebarLink>
           <SidebarLink icon={AddIcon} isOpen={isOpen} to="/cadastros">
