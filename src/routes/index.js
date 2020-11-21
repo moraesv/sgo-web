@@ -8,6 +8,9 @@ import Relatorios from '../views/Relatorios'
 import Oficiais from '../views/Oficiais'
 import OficiaisNovo from '../views/OficiaisNovo'
 import OficiaisEdicao from '../views/OficiaisEdicao'
+import CaracteristicasLocal from '../views/CaracteristicasLocal'
+import CaracteristicasLocalNovo from '../views/CaracteristicasLocalNovo'
+import CaracteristicasLocalEdicao from '../views/CaracteristicasLocalEdicao'
 
 const routes = [
   {
@@ -79,6 +82,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Oficial - Edição',
+  },
+  {
+    component: CaracteristicasLocal,
+    path: '/caracteristicas-local',
+    exact: true,
+    admin: true,
+    pageName: 'Características do local',
+  },
+  {
+    component: CaracteristicasLocalNovo,
+    path: '/caracteristicas-local/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Características do local - Criação',
+  },
+  {
+    component: CaracteristicasLocalEdicao,
+    path: '/caracteristicas-local/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Características do local - Edição',
   },
 ]
 
