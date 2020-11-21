@@ -15,8 +15,11 @@ import IluminacoesLocal from '../views/IluminacoesLocal'
 import IluminacoesLocalNovo from '../views/IluminacoesLocalNovo'
 import IluminacoesLocalEdicao from '../views/IluminacoesLocalEdicao'
 import TemposLocal from '../views/TemposLocal'
-import TemposLocallNovo from '../views/TemposLocalNovo'
+import TemposLocalNovo from '../views/TemposLocalNovo'
 import TemposLocalEdicao from '../views/TemposLocalEdicao'
+import StatusSemaforo from '../views/StatusSemaforo'
+import StatusSemaforoNovo from '../views/StatusSemaforoNovo'
+import StatusSemaforoEdicao from '../views/StatusSemaforoEdicao'
 
 const routes = [
   {
@@ -139,7 +142,7 @@ const routes = [
     pageName: 'Tempo do local',
   },
   {
-    component: TemposLocallNovo,
+    component: TemposLocalNovo,
     path: '/tempos-local/novo',
     exact: true,
     admin: true,
@@ -151,6 +154,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Tempo do local - Edição',
+  },
+  {
+    component: StatusSemaforo,
+    path: '/status-semaforo',
+    exact: true,
+    admin: true,
+    pageName: 'Status do semáforo',
+  },
+  {
+    component: StatusSemaforoNovo,
+    path: '/status-semaforo/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Status do semáforo - Criação',
+  },
+  {
+    component: StatusSemaforoEdicao,
+    path: '/status-semaforo/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Status do semáforo - Edição',
   },
 ]
 

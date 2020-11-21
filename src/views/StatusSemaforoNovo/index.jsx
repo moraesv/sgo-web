@@ -3,27 +3,27 @@ import { useHistory } from 'react-router-dom'
 import { Col, Container, Row } from 'reactstrap'
 import { Input, Button, Box, Label } from '../../components'
 import ButtonLink from '../../components/ButtonLink'
-import { createTempoLocal } from './services/requests'
+import { createStatusSemaforo } from './services/requests'
 
-function TemposLocalNovo() {
+function StatusSemaforoNovo() {
   const history = useHistory()
-  const [tempoLocal, setTempoLocal] = useState({
+  const [statusSemaforo, setStatusSemaforo] = useState({
     nome: '',
   })
 
   const create = useCallback(async () => {
-    const response = await createTempoLocal(tempoLocal)
+    const response = await createStatusSemaforo(statusSemaforo)
 
     if (response && response.id) {
-      history.push(`/tempos-local/${response.id}`)
+      history.push(`/status-semaforo/${response.id}`)
     }
-  }, [history, tempoLocal])
+  }, [history, statusSemaforo])
 
   const change = useCallback(
     (field, value) => {
-      setTempoLocal({ ...tempoLocal, [field]: value })
+      setStatusSemaforo({ ...statusSemaforo, [field]: value })
     },
-    [tempoLocal]
+    [statusSemaforo]
   )
 
   return (
@@ -31,7 +31,7 @@ function TemposLocalNovo() {
       <Container className="pb-7">
         <Row className="mt-5">
           <Col lg={2}>
-            <ButtonLink variant="gray" to="/tempos-local">
+            <ButtonLink variant="gray" to="/status-semaforo">
               Voltar
             </ButtonLink>
           </Col>
@@ -43,7 +43,7 @@ function TemposLocalNovo() {
               <Label>Nome</Label>
               <Input
                 required
-                value={tempoLocal.nome}
+                value={statusSemaforo.nome}
                 onChange={(e) => change('nome', e.target.value)}
               />
             </Col>
@@ -59,4 +59,4 @@ function TemposLocalNovo() {
   )
 }
 
-export default TemposLocalNovo
+export default StatusSemaforoNovo
