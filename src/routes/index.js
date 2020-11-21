@@ -26,6 +26,9 @@ import FormasSinalizacaoEdicao from '../views/FormasSinalizacaoEdicao'
 import TiposAcidente from '../views/TiposAcidente'
 import TiposAcidenteNovo from '../views/TiposAcidenteNovo'
 import TiposAcidenteEdicao from '../views/TiposAcidenteEdicao'
+import TiposPista from '../views/TiposPista'
+import TiposPistaNovo from '../views/TiposPistaNovo'
+import TiposPistaEdicao from '../views/TiposPistaEdicao'
 
 const routes = [
   {
@@ -223,6 +226,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Tipos de acidente - Edição',
+  },
+  {
+    component: TiposPista,
+    path: '/tipos-pista',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de pista',
+  },
+  {
+    component: TiposPistaNovo,
+    path: '/tipos-pista/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de pista - Criação',
+  },
+  {
+    component: TiposPistaEdicao,
+    path: '/tipos-pista/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de pista - Edição',
   },
 ]
 
