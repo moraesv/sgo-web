@@ -19,8 +19,6 @@ function AvisosEdicao() {
   const update = useCallback(async () => {
     await updateAviso(id, {
       ...aviso,
-      inicio: new Date(aviso.inicio).toLocaleDateString(),
-      fim: new Date(aviso.fim).toLocaleDateString(),
     })
   }, [aviso, id])
 
