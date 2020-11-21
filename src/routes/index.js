@@ -14,6 +14,9 @@ import CaracteristicasLocalEdicao from '../views/CaracteristicasLocalEdicao'
 import IluminacoesLocal from '../views/IluminacoesLocal'
 import IluminacoesLocalNovo from '../views/IluminacoesLocalNovo'
 import IluminacoesLocalEdicao from '../views/IluminacoesLocalEdicao'
+import TemposLocal from '../views/TemposLocal'
+import TemposLocallNovo from '../views/TemposLocalNovo'
+import TemposLocalEdicao from '../views/TemposLocalEdicao'
 
 const routes = [
   {
@@ -127,6 +130,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Iluminação do local - Edição',
+  },
+  {
+    component: TemposLocal,
+    path: '/tempos-local',
+    exact: true,
+    admin: true,
+    pageName: 'Tempo do local',
+  },
+  {
+    component: TemposLocallNovo,
+    path: '/tempos-local/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Tempo do local - Criação',
+  },
+  {
+    component: TemposLocalEdicao,
+    path: '/tempos-local/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Tempo do local - Edição',
   },
 ]
 
