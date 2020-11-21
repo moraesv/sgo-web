@@ -7,7 +7,12 @@ import { createOficial } from './services/requests'
 
 function OficiaisNovo() {
   const history = useHistory()
-  const [oficial, setOficial] = useState({})
+  const [oficial, setOficial] = useState({
+    nomeOficial: '',
+    nomeUsuario: '',
+    funcional: '',
+    chapa: '',
+  })
 
   const create = useCallback(async () => {
     const response = await createOficial(oficial)
@@ -40,6 +45,7 @@ function OficiaisNovo() {
             <Col lg={{ offset: 1, size: 5 }}>
               <Label>Nome</Label>
               <Input
+                required
                 value={oficial.nomeOficial}
                 onChange={(e) => change('nomeOficial', e.target.value)}
               />
