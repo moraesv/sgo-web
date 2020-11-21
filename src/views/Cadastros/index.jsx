@@ -16,14 +16,14 @@ function Cadastros() {
             </Pagelink>
           </Col>
           <Col lg={{ size: 2, offset: 1 }}>
-            <Pagelink to="/iluminacao-local">
+            <Pagelink to="/iluminacoes-local">
               Cadastrar iluminação do local
             </Pagelink>
           </Col>
         </Row>
         <Row className="mt-6">
           <Col lg={{ size: 2, offset: 2 }}>
-            <Pagelink to="/tempo-local">Cadastrar tempo do local</Pagelink>
+            <Pagelink to="/tempos-local">Cadastrar tempo do local</Pagelink>
           </Col>
           <Col lg={{ size: 2, offset: 1 }}>
             <Pagelink to="/status-semaforo">

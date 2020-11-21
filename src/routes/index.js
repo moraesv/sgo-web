@@ -11,6 +11,9 @@ import OficiaisEdicao from '../views/OficiaisEdicao'
 import CaracteristicasLocal from '../views/CaracteristicasLocal'
 import CaracteristicasLocalNovo from '../views/CaracteristicasLocalNovo'
 import CaracteristicasLocalEdicao from '../views/CaracteristicasLocalEdicao'
+import IluminacoesLocal from '../views/IluminacoesLocal'
+import IluminacoesLocalNovo from '../views/IluminacoesLocalNovo'
+import IluminacoesLocalEdicao from '../views/IluminacoesLocalEdicao'
 
 const routes = [
   {
@@ -103,6 +106,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Características do local - Edição',
+  },
+  {
+    component: IluminacoesLocal,
+    path: '/iluminacoes-local',
+    exact: true,
+    admin: true,
+    pageName: 'Iluminação do local',
+  },
+  {
+    component: IluminacoesLocalNovo,
+    path: '/iluminacoes-local/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Iluminação do local - Criação',
+  },
+  {
+    component: IluminacoesLocalEdicao,
+    path: '/iluminacoes-local/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Iluminação do local - Edição',
   },
 ]
 
