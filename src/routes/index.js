@@ -23,6 +23,9 @@ import StatusSemaforoEdicao from '../views/StatusSemaforoEdicao'
 import FormasSinalizacao from '../views/FormasSinalizacao'
 import FormasSinalizacaoNovo from '../views/FormasSinalizacaoNovo'
 import FormasSinalizacaoEdicao from '../views/FormasSinalizacaoEdicao'
+import TiposAcidente from '../views/TiposAcidente'
+import TiposAcidenteNovo from '../views/TiposAcidenteNovo'
+import TiposAcidenteEdicao from '../views/TiposAcidenteEdicao'
 
 const routes = [
   {
@@ -199,6 +202,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Formas de sinalização - Edição',
+  },
+  {
+    component: TiposAcidente,
+    path: '/tipos-acidente',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de acidente',
+  },
+  {
+    component: TiposAcidenteNovo,
+    path: '/tipos-acidente/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de acidente - Criação',
+  },
+  {
+    component: TiposAcidenteEdicao,
+    path: '/tipos-acidente/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Tipos de acidente - Edição',
   },
 ]
 
