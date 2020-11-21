@@ -20,6 +20,9 @@ import TemposLocalEdicao from '../views/TemposLocalEdicao'
 import StatusSemaforo from '../views/StatusSemaforo'
 import StatusSemaforoNovo from '../views/StatusSemaforoNovo'
 import StatusSemaforoEdicao from '../views/StatusSemaforoEdicao'
+import FormasSinalizacao from '../views/FormasSinalizacao'
+import FormasSinalizacaoNovo from '../views/FormasSinalizacaoNovo'
+import FormasSinalizacaoEdicao from '../views/FormasSinalizacaoEdicao'
 
 const routes = [
   {
@@ -175,6 +178,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Status do semáforo - Edição',
+  },
+  {
+    component: FormasSinalizacao,
+    path: '/formas-sinalizacao',
+    exact: true,
+    admin: true,
+    pageName: 'Formas de sinalização',
+  },
+  {
+    component: FormasSinalizacaoNovo,
+    path: '/formas-sinalizacao/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Formas de sinalização - Criação',
+  },
+  {
+    component: FormasSinalizacaoEdicao,
+    path: '/formas-sinalizacao/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Formas de sinalização - Edição',
   },
 ]
 
