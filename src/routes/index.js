@@ -32,6 +32,9 @@ import TiposPistaEdicao from '../views/TiposPistaEdicao'
 import Avisos from '../views/Avisos'
 import AvisosNovo from '../views/AvisosNovo'
 import AvisosEdicao from '../views/AvisosEdicao'
+import Atendimentos from '../views/Atendimentos'
+import AtendimentosNovo from '../views/AtendimentosNovo'
+import AtendimentosEdicao from '../views/AtendimentosEdicao'
 
 const routes = [
   {
@@ -271,6 +274,27 @@ const routes = [
     exact: true,
     admin: true,
     pageName: 'Avisos - Edição',
+  },
+  {
+    component: Atendimentos,
+    path: '/atendimentos',
+    exact: true,
+    admin: true,
+    pageName: 'Atendimentos',
+  },
+  {
+    component: AtendimentosNovo,
+    path: '/atendimentos/novo',
+    exact: true,
+    admin: true,
+    pageName: 'Atendimentos - Criação',
+  },
+  {
+    component: AtendimentosEdicao,
+    path: '/atendimentos/:id',
+    exact: true,
+    admin: true,
+    pageName: 'Atendimentos - Edição',
   },
 ]
 
